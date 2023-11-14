@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A3F76BF92AFD7E84007D21CE /* DrawingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76BF82AFD7E84007D21CE /* DrawingAppApp.swift */; };
+		A38232592AFD84BE00F320B0 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38232582AFD84BE00F320B0 /* CanvasView.swift */; };
+		A382325F2B0265BD00F320B0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382325E2B0265BD00F320B0 /* Store.swift */; };
+		A38232612B0265D900F320B0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38232602B0265D900F320B0 /* AppState.swift */; };
+		A38232632B0269A100F320B0 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38232622B0269A100F320B0 /* AppReducer.swift */; };
+		A3F76BF92AFD7E84007D21CE /* DrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76BF82AFD7E84007D21CE /* DrawingApp.swift */; };
 		A3F76BFB2AFD7E84007D21CE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76BFA2AFD7E84007D21CE /* Persistence.swift */; };
 		A3F76BFE2AFD7E84007D21CE /* DrawingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3F76BFC2AFD7E84007D21CE /* DrawingApp.xcdatamodeld */; };
-		A3F76C002AFD7E84007D21CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76BFF2AFD7E84007D21CE /* ContentView.swift */; };
+		A3F76C002AFD7E84007D21CE /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76BFF2AFD7E84007D21CE /* DrawingView.swift */; };
 		A3F76C022AFD7E86007D21CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F76C012AFD7E86007D21CE /* Assets.xcassets */; };
 		A3F76C062AFD7E86007D21CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F76C052AFD7E86007D21CE /* Preview Assets.xcassets */; };
 		A3F76C102AFD7E86007D21CE /* DrawingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F76C0F2AFD7E86007D21CE /* DrawingAppTests.swift */; };
@@ -36,11 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A38232582AFD84BE00F320B0 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		A382325E2B0265BD00F320B0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		A38232602B0265D900F320B0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A38232622B0269A100F320B0 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		A3F76BF52AFD7E84007D21CE /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3F76BF82AFD7E84007D21CE /* DrawingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppApp.swift; sourceTree = "<group>"; };
+		A3F76BF82AFD7E84007D21CE /* DrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingApp.swift; sourceTree = "<group>"; };
 		A3F76BFA2AFD7E84007D21CE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A3F76BFD2AFD7E84007D21CE /* DrawingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrawingApp.xcdatamodel; sourceTree = "<group>"; };
-		A3F76BFF2AFD7E84007D21CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A3F76BFF2AFD7E84007D21CE /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		A3F76C012AFD7E86007D21CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F76C032AFD7E86007D21CE /* DrawingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrawingApp.entitlements; sourceTree = "<group>"; };
 		A3F76C052AFD7E86007D21CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -99,9 +107,13 @@
 		A3F76BF72AFD7E84007D21CE /* DrawingApp */ = {
 			isa = PBXGroup;
 			children = (
-				A3F76BF82AFD7E84007D21CE /* DrawingAppApp.swift */,
+				A38232582AFD84BE00F320B0 /* CanvasView.swift */,
+				A3F76BF82AFD7E84007D21CE /* DrawingApp.swift */,
 				A3F76BFA2AFD7E84007D21CE /* Persistence.swift */,
-				A3F76BFF2AFD7E84007D21CE /* ContentView.swift */,
+				A3F76BFF2AFD7E84007D21CE /* DrawingView.swift */,
+				A382325E2B0265BD00F320B0 /* Store.swift */,
+				A38232602B0265D900F320B0 /* AppState.swift */,
+				A38232622B0269A100F320B0 /* AppReducer.swift */,
 				A3F76C012AFD7E86007D21CE /* Assets.xcassets */,
 				A3F76C032AFD7E86007D21CE /* DrawingApp.entitlements */,
 				A3F76BFC2AFD7E84007D21CE /* DrawingApp.xcdatamodeld */,
@@ -265,9 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F76BF92AFD7E84007D21CE /* DrawingAppApp.swift in Sources */,
+				A3F76BF92AFD7E84007D21CE /* DrawingApp.swift in Sources */,
 				A3F76BFE2AFD7E84007D21CE /* DrawingApp.xcdatamodeld in Sources */,
-				A3F76C002AFD7E84007D21CE /* ContentView.swift in Sources */,
+				A38232612B0265D900F320B0 /* AppState.swift in Sources */,
+				A38232592AFD84BE00F320B0 /* CanvasView.swift in Sources */,
+				A382325F2B0265BD00F320B0 /* Store.swift in Sources */,
+				A3F76C002AFD7E84007D21CE /* DrawingView.swift in Sources */,
+				A38232632B0269A100F320B0 /* AppReducer.swift in Sources */,
 				A3F76BFB2AFD7E84007D21CE /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
