@@ -11,22 +11,14 @@ import CoreData
 struct DrawingView: View {
     @EnvironmentObject var store: Store
 
-    @State var scale: CGFloat = 1.0
-
     var body: some View {
         NavigationStack {
-            ScrollView {
+            Group {
                 CanvasView()
-                    .frame(width: 1024, height: 1024)
-                    .gesture(
-                        MagnificationGesture()
-                            .onChanged({ (scale) in
-                                self.scale = scale
-                            })
-                    )
-                    .scaleEffect(scale)
+                    .panScaleRotate()
+                    .frame(width: 512, height: 512)
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.gray)
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {

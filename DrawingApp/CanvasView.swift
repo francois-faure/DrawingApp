@@ -36,9 +36,9 @@ struct CanvasView: UIViewRepresentable {
     }
 
     class Coordinator: NSObject, MTKViewDelegate {
-        var metalView: CanvasView
-        var device: MTLDevice?
-        var commandQueue: MTLCommandQueue?
+        private var metalView: CanvasView
+        private var device: MTLDevice?
+        private var commandQueue: MTLCommandQueue?
 
         init(_ parent: CanvasView) {
             metalView = parent
@@ -71,7 +71,7 @@ struct CanvasView: UIViewRepresentable {
             let commandBuffer = commandQueue?.makeCommandBuffer()
 
             let renderPassDescriptor = view.currentRenderPassDescriptor
-            renderPassDescriptor?.colorAttachments[0].clearColor = MTLClearColorMake(1.0, 1.0, 1.0, 1.0)
+            renderPassDescriptor?.colorAttachments[0].clearColor = MTLClearColorMake(1.0, 0.0, 0.0, 1.0)
             renderPassDescriptor?.colorAttachments[0].loadAction = .clear
             renderPassDescriptor?.colorAttachments[0].storeAction = .store
 

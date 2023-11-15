@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A35D04842B040EEE00CE6BDD /* PanScaleRotateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35D04832B040EED00CE6BDD /* PanScaleRotateView.swift */; };
 		A38232592AFD84BE00F320B0 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38232582AFD84BE00F320B0 /* CanvasView.swift */; };
 		A382325F2B0265BD00F320B0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382325E2B0265BD00F320B0 /* Store.swift */; };
 		A38232612B0265D900F320B0 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38232602B0265D900F320B0 /* AppState.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A35D04832B040EED00CE6BDD /* PanScaleRotateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanScaleRotateView.swift; sourceTree = "<group>"; };
 		A38232582AFD84BE00F320B0 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		A382325E2B0265BD00F320B0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		A38232602B0265D900F320B0 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				A382325E2B0265BD00F320B0 /* Store.swift */,
 				A38232602B0265D900F320B0 /* AppState.swift */,
 				A38232622B0269A100F320B0 /* AppReducer.swift */,
+				A35D04832B040EED00CE6BDD /* PanScaleRotateView.swift */,
 				A3F76C012AFD7E86007D21CE /* Assets.xcassets */,
 				A3F76C032AFD7E86007D21CE /* DrawingApp.entitlements */,
 				A3F76BFC2AFD7E84007D21CE /* DrawingApp.xcdatamodeld */,
@@ -280,6 +283,7 @@
 				A3F76BF92AFD7E84007D21CE /* DrawingApp.swift in Sources */,
 				A3F76BFE2AFD7E84007D21CE /* DrawingApp.xcdatamodeld in Sources */,
 				A38232612B0265D900F320B0 /* AppState.swift in Sources */,
+				A35D04842B040EEE00CE6BDD /* PanScaleRotateView.swift in Sources */,
 				A38232592AFD84BE00F320B0 /* CanvasView.swift in Sources */,
 				A382325F2B0265BD00F320B0 /* Store.swift in Sources */,
 				A3F76C002AFD7E84007D21CE /* DrawingView.swift in Sources */,
