@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct DrawingView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: AppStore
 
     var body: some View {
         NavigationStack {
@@ -20,13 +20,22 @@ struct DrawingView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.gray)
-            .toolbar {
-                ToolbarItemGroup(placement: .primaryAction) {
-                    Button("Press Me") {
-                        print("Pressed")
+            .toolbar(id: "item.toolbar") {
+                ToolbarItem(id: "item.pencil", placement: .primaryAction) {
+                    Button(action: {}) {
+                        Image(systemName: "pencil")
+                    }
+                }
+                ToolbarItem(id: "item.eraser", placement: .secondaryAction) {
+                    Button(action: {}) {
+                        Image(systemName: "eraser")
                     }
                 }
             }
+            .toolbarBackground(.visible, for: .tabBar, .navigationBar)
+            .toolbarBackground(.white, for: .tabBar, .navigationBar)
+            .toolbarColorScheme(ColorScheme.light, for: .tabBar)
+
         }
     }
 }
@@ -35,7 +44,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         DrawingView()
             .environmentObject(
-                Store(
+                AppStore(
                     reducer: AppReducer(),
                     initialState: AppState()
                 )

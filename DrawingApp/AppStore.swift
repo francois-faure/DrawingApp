@@ -9,7 +9,7 @@ import Foundation
 
 protocol Action {}
 
-actor Store: ObservableObject {
+actor AppStore: ObservableObject {
     @MainActor @Published private(set) var state: ReState
     private let reducer: Reducer
 

@@ -15,7 +15,7 @@ struct DrawingApp: App {
         WindowGroup {
             DrawingView()
                 .environmentObject(
-                    Store(
+                    AppStore(
                         reducer: AppReducer(),
                         initialState: AppState()
                     )
